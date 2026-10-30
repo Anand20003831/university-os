@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UniversityOS.App/UniversityOS.App.fsproj" />
+    <Project Path="src/UniversityOS.Application/UniversityOS.Application.fsproj" />
+    <Project Path="src/UniversityOS.Domain/UniversityOS.Domain.fsproj" />
+    <Project Path="src/UniversityOS.Infrastructure/UniversityOS.Infrastructure.fsproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UniversityOS.Tests/UniversityOS.Tests.fsproj" />
+  </Folder>
+</Solution>

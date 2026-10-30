@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="PlanningTests.fs" />
+    <Compile Include="CaptureHeuristicsTests.fs" />
+    <Compile Include="MemoryStatsTests.fs" />
+    <Compile Include="MarkdownTests.fs" />
+    <Compile Include="GraphLayoutTests.fs" />
+    <Compile Include="DesignSystemTests.fs" />
+    <Compile Include="SurfaceTests.fs" />
+    <Compile Include="BackgroundParamsTests.fs" />
+    <Compile Include="QualityControllerTests.fs" />
+    <Compile Include="AppearanceMigrationTests.fs" />
+    <Compile Include="AppearanceBehaviourTests.fs" />
+    <Compile Include="ParallaxTests.fs" />
+    <Compile Include="MemoryPressureTests.fs" />
+    <Compile Include="ShellTests.fs" />
+    <Compile Include="DashboardTests.fs" />
+    <Compile Include="TimelineTests.fs" />
+    <Compile Include="TimelineActionsTests.fs" />
+    <Compile Include="PlannerViewTests.fs" />
+    <Compile Include="InboxViewTests.fs" />
+    <Compile Include="AssignmentsViewTests.fs" />
+    <Compile Include="ModulesViewTests.fs" />
+    <Compile Include="LecturesViewTests.fs" />
+    <Compile Include="NotesViewTests.fs" />
+    <Compile Include="DocumentsViewTests.fs" />
+    <Compile Include="GraphViewTests.fs" />
+    <Compile Include="AssistantLogicTests.fs" />
+    <Compile Include="AssistantViewTests.fs" />
+    <Compile Include="SearchViewTests.fs" />
+    <Compile Include="CalendarViewTests.fs" />
+    <Compile Include="ConnectionsViewTests.fs" />
+    <Compile Include="SettingsLogicTests.fs" />
+    <Compile Include="SettingsViewTests.fs" />
+    <Compile Include="AuditHarness.fs" />
+    <Compile Include="AuditFixtures.fs" />
+    <Compile Include="ViewportAuditTests.fs" />
+    <Compile Include="AccessibleNameAuditTests.fs" />
+    <Compile Include="RowActionRoutingTests.fs" />
+    <Compile Include="GlyphCentringTests.fs" />
+    <Compile Include="ShortcutTests.fs" />
+    <Compile Include="ExpandedOutlineTests.fs" />
+    <Compile Include="DashboardReentryTests.fs" />
+    <Compile Include="DashboardCardBalanceTests.fs" />
+    <Compile Include="PrimaryActionTintTests.fs" />
+    <Compile Include="FloatingWindowTests.fs" />
+    <Compile Include="MilestoneTests.fs" />
+    <Compile Include="PlannerReasoningTests.fs" />
+    <Compile Include="SearchFieldTests.fs" />
+    <Compile Include="GlassPrimaryTintTests.fs" />
+    <Compile Include="BadgeSizingTests.fs" />
+    <Compile Include="ConnectionsSelectionTests.fs" />
+    <Compile Include="PlannerPresentationTests.fs" />
+    <Compile Include="PlannerRowTests.fs" />
+    <Compile Include="AssignmentsPresentationTests.fs" />
+    <Compile Include="AssignmentsRiskTests.fs" />
+    <Compile Include="LightThemeTests.fs" />
+    <Compile Include="ReviewModeTests.fs" />
+    <Compile Include="RenderingTests.fs" />
+    <Compile Include="GoldenImageTests.fs" />
+    <Compile Include="RepositoryTests.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\UniversityOS.Domain\UniversityOS.Domain.fsproj" />
+    <ProjectReference Include="..\..\src\UniversityOS.Application\UniversityOS.Application.fsproj" />
+    <ProjectReference Include="..\..\src\UniversityOS.Infrastructure\UniversityOS.Infrastructure.fsproj" />
+    <!-- For the App-hosted pure modules: Markdown, GraphLayout, the design
+         token system and the background painters. No Avalonia application is
+         started by these tests. -->
+    <ProjectReference Include="..\..\src\UniversityOS.App\UniversityOS.App.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <!-- Rendering tests draw into a raster SKSurface: no GPU, no Avalonia. -->
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="2.88.9" />
+  </ItemGroup>
+
+</Project>

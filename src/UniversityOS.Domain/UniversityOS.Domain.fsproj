@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Include="Primitives.fs" />
+    <Compile Include="Modules.fs" />
+    <Compile Include="Assignments.fs" />
+    <Compile Include="Milestones.fs" />
+    <Compile Include="Calendar.fs" />
+    <Compile Include="Notes.fs" />
+    <Compile Include="Documents.fs" />
+    <Compile Include="Lectures.fs" />
+    <Compile Include="Revision.fs" />
+    <Compile Include="Links.fs" />
+    <Compile Include="Inbox.fs" />
+    <Compile Include="Chat.fs" />
+    <Compile Include="Connections.fs" />
+    <Compile Include="Search.fs" />
+    <Compile Include="Settings.fs" />
+    <Compile Include="Appearance.fs" />
+    <Compile Include="Sessions.fs" />
+    <Compile Include="StudyTime.fs" />
+    <Compile Include="Activity.fs" />
+    <Compile Include="Memory.fs" />
+    <Compile Include="UiState.fs" />
+    <Compile Include="Planning.fs" />
+  </ItemGroup>
+
+</Project>

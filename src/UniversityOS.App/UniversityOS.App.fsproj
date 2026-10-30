@@ -1,0 +1,109 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>UniversityOS</AssemblyName>
+    <RootNamespace>UniversityOS.App</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Design\Palette.fs" />
+    <Compile Include="Design\Surfaces.fs" />
+    <Compile Include="Design\Typography.fs" />
+    <Compile Include="Design\Tokens.fs" />
+    <Compile Include="Design\Motion.fs" />
+    <Compile Include="Design\BackgroundParams.fs" />
+    <Compile Include="Design\Glass.fs" />
+    <Compile Include="Design\Parallax.fs" />
+    <Compile Include="Design\TokenStore.fs" />
+    <Compile Include="Theme.fs" />
+    <Compile Include="Format.fs" />
+    <Compile Include="AppServices.fs" />
+    <Compile Include="Markdown.fs" />
+    <Compile Include="GraphLayout.fs" />
+    <Compile Include="Rendering\Diagnostics.fs" />
+    <Compile Include="Rendering\Capabilities.fs" />
+    <Compile Include="Rendering\SkiaInterop.fs" />
+    <Compile Include="Rendering\FrameClock.fs" />
+    <Compile Include="Rendering\QualityController.fs" />
+    <Compile Include="Rendering\ShaderLibrary.fs" />
+    <Compile Include="Rendering\BackdropCache.fs" />
+    <Compile Include="Rendering\MemoryPressure.fs" />
+    <Compile Include="Rendering\SkiaControl.fs" />
+    <Compile Include="Rendering\BackgroundPainter.fs" />
+    <Compile Include="Rendering\BackdropPipeline.fs" />
+    <Compile Include="Rendering\SystemPreferences.fs" />
+    <Compile Include="Rendering\RenderReport.fs" />
+    <Compile Include="Rendering\AcceptanceSweep.fs" />
+    <Compile Include="Controls\BackgroundHost.fs" />
+    <Compile Include="Controls\GlassPanel.fs" />
+    <Compile Include="Controls\Dsl.fs" />
+    <Compile Include="Components.fs" />
+    <Compile Include="FloatingWindow.fs" />
+    <Compile Include="Features\DashboardLogic.fs" />
+    <Compile Include="Features\Dashboard.fs" />
+    <Compile Include="Features\InboxLogic.fs" />
+    <Compile Include="Features\InboxView.fs" />
+    <Compile Include="Features\AssignmentsLogic.fs" />
+    <Compile Include="Features\AssignmentsView.fs" />
+    <!-- After AssignmentsLogic: a module's "needs attention" reuses the
+         assignment risk model rather than defining a second one. -->
+    <Compile Include="Features\ModulesLogic.fs" />
+    <Compile Include="Features\ModulesView.fs" />
+    <Compile Include="Features\NotesLogic.fs" />
+    <Compile Include="Features\NotesView.fs" />
+    <Compile Include="Features\AssistantLogic.fs" />
+    <Compile Include="Features\ChatView.fs" />
+    <Compile Include="Features\DocumentsLogic.fs" />
+    <Compile Include="Features\DocumentsView.fs" />
+    <Compile Include="Features\SettingsLogic.fs" />
+    <Compile Include="Features\SettingsView.fs" />
+    <Compile Include="Features\TimelineLogic.fs" />
+    <Compile Include="Features\TimelineView.fs" />
+    <!-- After TimelineView: the Planner's history card reuses the Timeline's
+         activity-kind identity colours rather than defining a second set. -->
+    <Compile Include="Features\PlannerLogic.fs" />
+    <Compile Include="Features\Planner.fs" />
+    <Compile Include="Features\GraphLogic.fs" />
+    <Compile Include="Features\GraphView.fs" />
+    <Compile Include="Features\LecturesLogic.fs" />
+    <Compile Include="Features\LecturesView.fs" />
+    <Compile Include="Features\CalendarLogic.fs" />
+    <Compile Include="Features\CalendarView.fs" />
+    <!-- After GraphLogic: Search reuses the graph's entity-kind glyphs rather
+         than defining a second set that could drift from them. -->
+    <Compile Include="Features\SearchLogic.fs" />
+    <Compile Include="Features\SearchView.fs" />
+    <Compile Include="Features\ConnectionsLogic.fs" />
+    <Compile Include="Features\ConnectionsView.fs" />
+    <Compile Include="Features\DesignPreview.fs" />
+    <Compile Include="ShellLayout.fs" />
+    <Compile Include="Shell.fs" />
+    <Compile Include="ReviewMode.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UniversityOS.Domain\UniversityOS.Domain.fsproj" />
+    <ProjectReference Include="..\UniversityOS.Application\UniversityOS.Application.fsproj" />
+    <ProjectReference Include="..\UniversityOS.Infrastructure\UniversityOS.Infrastructure.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.2" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.2" />
+    <!-- Skia interop for the custom rendering system (ISkiaSharpApiLeaseFeature
+         and the raw SKCanvas it leases). Versions must track Avalonia's own
+         Skia backend, so pin them together. -->
+    <PackageReference Include="Avalonia.Skia" Version="11.3.2" />
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
+    <PackageReference Include="Avalonia.FuncUI" Version="1.5.1" />
+    <PackageReference Include="Avalonia.FuncUI.Elmish" Version="1.5.1" />
+    <PackageReference Include="Elmish" Version="4.2.0" />
+    <!-- Direct pin for a transitive Avalonia dependency with a known advisory. -->
+    <PackageReference Include="Tmds.DBus.Protocol" Version="0.94.2" />
+  </ItemGroup>
+
+</Project>

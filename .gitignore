@@ -1,0 +1,54 @@
+# ---- build output ----------------------------------------------------------
+bin/
+obj/
+TestResults/
+
+# The self-contained publish output is ~123 MB of runtime and native libraries,
+# all reproducible from source with publish.cmd. Never committed.
+publish/
+
+# ---- IDE and editor state --------------------------------------------------
+*.user
+*.suo
+.vs/
+.idea/
+.vscode/
+*.DotSettings.user
+
+# ---- local tooling state ---------------------------------------------------
+.claude/
+CLAUDE.md
+
+# ---- runtime data (never in the repo) --------------------------------------
+# University OS stores everything the user creates in %APPDATA%\UniversityOS,
+# not here — see DATA_MIGRATION.md. These patterns exist so a database copied
+# into the tree for inspection cannot be committed by accident.
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ---- secrets ---------------------------------------------------------------
+# API keys and OAuth tokens are DPAPI-encrypted under
+# %APPDATA%\UniversityOS\secrets and are never written here. Belt and braces.
+*.secret
+*.key
+*.pem
+appsettings.*.local.json
+.env
+.env.*
+
+# ---- logs, archives and scratch --------------------------------------------
+*.log
+*.tmp
+*.bak
+UniversityOS-windows-published-*.zip
+backup/
+
+# ---- deliberately NOT ignored ----------------------------------------------
+# tests/UniversityOS.Tests/baselines/*.png  golden-image baselines (required)
+# src/**/*.fs                               all source; the SKSL shaders are F#
+#                                           string literals, not asset files
+# University OS UI redesign/                the design source of truth
+# global.json                               pins the SDK

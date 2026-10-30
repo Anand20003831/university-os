@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Include="Json.fs" />
+    <Compile Include="Database.fs" />
+    <Compile Include="Fts.fs" />
+    <Compile Include="Repositories\CoreRepositories.fs" />
+    <Compile Include="Repositories\KnowledgeRepositories.fs" />
+    <Compile Include="Repositories\SystemRepositories.fs" />
+    <Compile Include="Repositories\AppearanceStore.fs" />
+    <Compile Include="Files\FileStorage.fs" />
+    <Compile Include="Files\TextExtraction.fs" />
+    <Compile Include="Files\DocumentImportService.fs" />
+    <Compile Include="Security\SecretStore.fs" />
+    <Compile Include="Ai\ClaudeProvider.fs" />
+    <Compile Include="Connectors\Http.fs" />
+    <Compile Include="Connectors\OAuth.fs" />
+    <Compile Include="Connectors\ClaudeConnector.fs" />
+    <Compile Include="Connectors\MoodleConnector.fs" />
+    <Compile Include="Connectors\GitLabConnector.fs" />
+    <Compile Include="Connectors\GoogleConnectors.fs" />
+    <Compile Include="Connectors\MicrosoftConnectors.fs" />
+    <Compile Include="Connectors\Registry.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UniversityOS.Domain\UniversityOS.Domain.fsproj" />
+    <ProjectReference Include="..\UniversityOS.Application\UniversityOS.Application.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+    <PackageReference Include="FSharp.SystemTextJson" Version="1.3.13" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="9.0.0" />
+    <PackageReference Include="PdfPig" Version="0.1.8" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.1.0" />
+    <!-- Direct pins for transitive packages with known advisories. -->
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.12" />
+    <PackageReference Include="System.IO.Packaging" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>

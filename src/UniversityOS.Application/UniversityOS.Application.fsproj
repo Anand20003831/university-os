@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Compile Include="Abstractions.fs" />
+    <Compile Include="Ai.fs" />
+    <Compile Include="Connectors.fs" />
+    <Compile Include="CaptureHeuristics.fs" />
+    <Compile Include="MemoryStats.fs" />
+    <Compile Include="PlannerService.fs" />
+    <Compile Include="AiService.fs" />
+    <Compile Include="CaptureService.fs" />
+    <Compile Include="DashboardService.fs" />
+    <Compile Include="BriefingService.fs" />
+    <Compile Include="MemoryService.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UniversityOS.Domain\UniversityOS.Domain.fsproj" />
+  </ItemGroup>
+
+</Project>
