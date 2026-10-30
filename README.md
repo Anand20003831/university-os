@@ -4,6 +4,10 @@ A native Windows desktop app for university life. It brings modules, assignments
 
 > **"What should I be doing right now?"**
 
+![The University OS dashboard](docs/images/dashboard.png)
+
+*Screenshots use made-up sample data.*
+
 ## Features
 
 - **Study planner** that schedules work around deadlines, priorities and available time
@@ -13,6 +17,8 @@ A native Windows desktop app for university life. It brings modules, assignments
 - **Connections** to Moodle, GitLab, Gmail, Outlook, Google Drive and OneDrive
 - **Optional AI assistant** using Claude through a provider-agnostic interface. Everything else works offline without it
 - **Light and dark themes**, with automated readability checks
+
+![The University OS timeline](docs/images/timeline.png)
 
 ## Built with
 
